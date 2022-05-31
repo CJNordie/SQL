@@ -1,0 +1,25 @@
+--Create a vehicle store database
+CREATE TABLE my_store (id INTEGER PRIMARY KEY, make TEXT, model TEXT, quantity INTEGER, color TEXT, price INTEGER);
+
+INSERT INTO my_store VALUES
+(1, 'Toyota', 'Camry', 14, 'black', 30000),
+(2, 'Jeep', 'Renegade', 7, 'red', 40000),
+(3, 'Ford', 'Escape', 4, 'silver', 35000),
+(4, 'Nissan', 'Rogue', 12, 'black', 38000),
+(5, 'Dodge', 'Ram 250', 5, 'white', 50000),
+(6, 'Toyota', 'corolla', 5, 'black', 25000),
+(7, 'Chevy', 'Malibu', 12, 'white', 20000),
+(8, 'Kia', 'edge', 5, 'black', 30000),
+(9, 'Ford', 'focus', 15, 'red', 20000),
+(10, 'Dodge', 'neon', 1, 'silver', 4000),
+(11, 'Nissan', 'altima', 3, 'brown', 15000),
+(12, 'Chevy', 'nova', 1, 'red', 4000),
+(13, 'Mazda', 'three', 6, 'blue', 23000),
+(14, 'Mazda', 'protege', 1, 'white', 11000),
+(15, 'Dodge', 'durango', 4, 'silver', 45000);
+
+--display the database ordered by price. 
+SELECT * FROM my_store ORDER BY price asc;
+
+--how many cars in my store are white?
+SELECT SUM (quantity) FROM my_store WHERE color = 'white';
